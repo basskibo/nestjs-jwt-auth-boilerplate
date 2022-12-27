@@ -26,13 +26,10 @@ export class UsersController {
     return result;
   }
   @Get('/:username')
-  async getUser(
-    @Param('username') username: string,
-    @Param('firstName') firstName ): Promise<User> {
-    console.log(">>>>>>", username)
-    console.log(">>>>>>", firstName)
+  async getUser(@Param('username') username: string): Promise<User> {
+    console.log('>>>>>>', username);
     const result = await this.usersService.getUser({ username: username });
-    console.log(result)
+    console.log(result);
     return result;
   }
 }
