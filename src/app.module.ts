@@ -8,7 +8,7 @@ import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     UsersModule,
-    MongooseModule.forRoot('mongodb://localhost/authentication'),
+    MongooseModule.forRoot('mongodb://localhost/authenticate_boilerplate'),
     AuthModule,
   ],
   controllers: [AppController],
